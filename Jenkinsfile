@@ -9,8 +9,13 @@ node {
 
     stage('Build image') {
         /* This builds the actual image */
-
-        app = docker.build("piyogeshdocker/dockerapi")
+		 agent {
+				docker {
+				    image 'piyogeshdocker/dockerapi'
+				    args '-v /c/jenkins:/var/jenkins_home jenkinsci/blueocean'
+				}
+			    }
+        
     }
 
     stage('Test image') {
