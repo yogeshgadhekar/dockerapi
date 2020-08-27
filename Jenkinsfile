@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "piyogeshdocker/dockerapi"
-    registryCredential = 'git-cred'
+    registryCredential = 'git_cred'
     dockerImage = ''
   }
   agent any
