@@ -3,6 +3,8 @@ pipeline {
     registry = "piyogeshdocker/dockerapi"
     registryCredential = 'git_cred'
     dockerImage = ''
+    
+    
   }
   agent any
   stages {
